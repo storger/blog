@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git常用命令 | Mr.Zhou&#39;s Blog</title>
+    <meta name="description" content=" ">
+    <link rel="icon" href="/blog/favicon.ico">
+  <link rel="manifest" href="/blog/manifest.json">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="referrer" content="no-referrer">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.37525a79.css" as="style"><link rel="preload" href="/blog/assets/js/app.2ffb31ea.js" as="script"><link rel="preload" href="/blog/assets/js/7.7024e7ac.js" as="script"><link rel="preload" href="/blog/assets/js/2.591bd700.js" as="script"><link rel="preload" href="/blog/assets/js/19.c4a51bfb.js" as="script"><link rel="preload" href="/blog/assets/js/10.50f1bcb9.js" as="script"><link rel="prefetch" href="/blog/assets/js/1.93e346cb.js"><link rel="prefetch" href="/blog/assets/js/11.a9df5a27.js"><link rel="prefetch" href="/blog/assets/js/12.be06d2f0.js"><link rel="prefetch" href="/blog/assets/js/13.7e31e159.js"><link rel="prefetch" href="/blog/assets/js/14.ba39db5c.js"><link rel="prefetch" href="/blog/assets/js/15.9b6ccdb6.js"><link rel="prefetch" href="/blog/assets/js/16.96ba9b96.js"><link rel="prefetch" href="/blog/assets/js/17.6bc2ed74.js"><link rel="prefetch" href="/blog/assets/js/18.5863a37f.js"><link rel="prefetch" href="/blog/assets/js/20.8e5c38db.js"><link rel="prefetch" href="/blog/assets/js/21.14a077fa.js"><link rel="prefetch" href="/blog/assets/js/22.8319269d.js"><link rel="prefetch" href="/blog/assets/js/23.82e8f913.js"><link rel="prefetch" href="/blog/assets/js/24.f92e9ed8.js"><link rel="prefetch" href="/blog/assets/js/25.7a4c3ea9.js"><link rel="prefetch" href="/blog/assets/js/26.f63e4b38.js"><link rel="prefetch" href="/blog/assets/js/27.72ac7147.js"><link rel="prefetch" href="/blog/assets/js/4.1b843715.js"><link rel="prefetch" href="/blog/assets/js/5.d938c5bc.js"><link rel="prefetch" href="/blog/assets/js/6.fceab7c1.js"><link rel="prefetch" href="/blog/assets/js/8.aa684654.js"><link rel="prefetch" href="/blog/assets/js/9.45bf253a.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.37525a79.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/logo.png" alt="Mr.Zhou's Blog" class="logo"> <span class="site-name">Mr.Zhou's Blog</span></a> <div class="links"><div class="color-picker"><a href="#" class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博文分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/category/教程.html" class="nav-link"><i class="iconfont undefined"></i>
+  教程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/记录.html" class="nav-link"><i class="iconfont undefined"></i>
+  记录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/资源.html" class="nav-link"><i class="iconfont undefined"></i>
+  资源
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="https://github.com/storger" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博文分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/category/教程.html" class="nav-link"><i class="iconfont undefined"></i>
+  教程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/记录.html" class="nav-link"><i class="iconfont undefined"></i>
+  记录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/category/资源.html" class="nav-link"><i class="iconfont undefined"></i>
+  资源
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="https://github.com/storger" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Git常用命令</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/resource/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#git-常用命令" class="sidebar-link">Git 常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/resource/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#全局配置" class="sidebar-link">全局配置</a></li><li class="sidebar-sub-header"><a href="/blog/resource/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#仓库管理" class="sidebar-link">仓库管理</a></li></ul></li></ul></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>Git常用命令</h1> <hr> <div data-v-d90080fa><i class="iconfont reco-account" data-v-d90080fa><span data-v-d90080fa>太阳丶</span></i> <i class="iconfont reco-date" data-v-d90080fa><span data-v-d90080fa>2021-11-9</span></i> <span id="/blog/resource/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-77f62277 data-v-d90080fa><i class="iconfont reco-eye" style="margin-right: .5rem" data-v-77f62277></i> <a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;" data-v-77f62277></a></span> <i class="iconfont reco-tag tags" data-v-d90080fa><span class="tag-item" data-v-d90080fa>
+      Git
+    </span></i></div></div> <div class="content default"><h2 id="git-常用命令"><a href="#git-常用命令" aria-hidden="true" class="header-anchor">#</a> Git 常用命令</h2> <h3 id="全局配置"><a href="#全局配置" aria-hidden="true" class="header-anchor">#</a> 全局配置</h3> <ul><li><p>检查配置信息（配置信息保存在<code>.gitconfig</code>文件下）</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> config --list // 列出所有 Git 当时能找到的配置
+<span class="token function">git</span> config --global --list // 列出全局配置信息
+<span class="token function">git</span> config --system --list // 列出系统配置信息
+</code></pre></div></li> <li><p>修改用户信息</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> config --global user.name <span class="token string">&quot;John Doe&quot;</span> // 修改用户名
+<span class="token function">git</span> config --global user.email johndoe@example.com // 修改用户邮箱
+</code></pre></div></li></ul> <h3 id="仓库管理"><a href="#仓库管理" aria-hidden="true" class="header-anchor">#</a> 仓库管理</h3> <ul><li><p>基础命令</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> init // 初始化git
+<span class="token function">git</span> status // 查看文件状态
+<span class="token function">git</span> log // 查看提交日志
+<span class="token function">git</span> <span class="token function">add</span> <span class="token operator">&lt;</span>paths<span class="token operator">&gt;</span> // 暂存文件
+<span class="token function">git</span> commit -m <span class="token operator">&lt;</span>message<span class="token operator">&gt;</span> // 提交暂存文件，并添加描述
+</code></pre></div></li> <li><p>远程仓库</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> clone <span class="token operator">&lt;</span>url<span class="token operator">&gt;</span> // 克隆远程仓库
+<span class="token function">git</span> remote -v // 查看所有远程仓库
+<span class="token function">git</span> remote <span class="token function">add</span> <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>url<span class="token operator">&gt;</span> // 添加一个新的远程 Git 仓库，同时指定一个方便使用的简写
+<span class="token function">git</span> remote <span class="token function">rename</span> <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>newname<span class="token operator">&gt;</span> // 重命名远程仓库
+<span class="token function">git</span> remote remove<span class="token operator">|</span><span class="token function">rm</span> <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span> // 删除远程仓库
+<span class="token function">git</span> remote set-url <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>url<span class="token operator">&gt;</span> // 修改远程仓库url
+<span class="token function">git</span> fetch <span class="token operator">&lt;</span>remote<span class="token operator">&gt;</span> // 从远程中拉取数据
+<span class="token function">git</span> pull --rebase// 拉取本地分支对应的远程分支数据，并自动进行合并，git pull <span class="token operator">=</span> <span class="token function">git</span> fetch + <span class="token function">git</span> merge,在实际使用中，git fetch更安全一些
+<span class="token function">git</span> push --force orgin master // 强制覆盖远程仓库
+<span class="token function">git</span> push --set-upstream<span class="token operator">|</span>-u origin master // 推送并把远程仓库和本地仓库关联
+上面命令可以用下面两条命令代替
+<span class="token function">git</span> push origin master
+<span class="token function">git</span> branch <span class="token punctuation">[</span>--set-upstream-to<span class="token operator">=</span>origin/master<span class="token operator">|</span>-u origin/master<span class="token punctuation">]</span> master
+</code></pre></div></li> <li><p>标签管理</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> tag // 列出标签
+<span class="token function">git</span> tag -a <span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span> -m <span class="token operator">&lt;</span>message<span class="token operator">&gt;</span> // 创建标注标签
+<span class="token function">git</span> tag <span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span>  // 创建轻量标签
+<span class="token function">git</span> tag -d <span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span> // 删除本地标签
+<span class="token function">git</span> push origin <span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span> // 标签共享至远程
+<span class="token function">git</span> push origin --tags // 共享所有标签到远程
+<span class="token function">git</span> push origin :refs/tags/<span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span> // 删除远程标签第一种方法
+<span class="token function">git</span> push origin --delete <span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span> // 删除远程标签第二种方式
+<span class="token function">git</span> checkout <span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span> // 检出标签，注意检出的标签不能作为分支使用
+<span class="token function">git</span> checkout -b <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span> // 将标签检出为一个新的分支
+</code></pre></div></li> <li><p>时光穿梭</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> commit --amend // 重新提交
+<span class="token function">git</span> reset HEAD <span class="token operator">&lt;</span>paths<span class="token operator">&gt;</span> // 撤销暂存文件
+<span class="token function">git</span> checkout -- <span class="token operator">&lt;</span>paths<span class="token operator">&gt;</span> // 撤销对文件的修改，Git会用最近的版本覆盖它
+<span class="token function">git</span> revert <span class="token operator">&lt;</span>commit<span class="token operator">&gt;</span> //  撤销指定的版本，撤销也会作为一次提交进行保存
+<span class="token function">git</span> reset --hard HEAD^ // 回退到上一版本
+<span class="token function">git</span> reset --hard <span class="token operator">&lt;</span>commit<span class="token operator">&gt;</span> // 回退到指定版本
+<span class="token function">git</span> reflog // 查看命令历史
+</code></pre></div></li> <li><p>分支管理</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> branch -a // 列出本地和远程所有分支
+<span class="token function">git</span> branch <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> // 创建分支
+<span class="token function">git</span> checkout<span class="token operator">|</span>switch <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> // 切换分支
+<span class="token function">git</span> checkout -b <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> <span class="token punctuation">[</span>origin/master<span class="token punctuation">]</span>? 或 <span class="token function">git</span> checkout --track origin/serverfix // 创建并切换分支或从远程拉取分支到本地
+<span class="token function">git</span> branch -d<span class="token operator">|</span>-D <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> // 删除分支
+<span class="token function">git</span> checkout <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>paths<span class="token operator">&gt;</span> // 从其他分支获取文件或文件夹
+<span class="token function">git</span> push --delete origin <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> // 跟删除远程标签一样删除远程分支
+<span class="token function">git</span> merge <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> // 合并分支
+<span class="token function">git</span> merge <span class="token punctuation">(</span>--continue <span class="token operator">|</span> --abort <span class="token operator">|</span> --quit<span class="token punctuation">)</span> // （继续，撤销，静默）合并
+<span class="token function">git</span> rebase <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span> // 获取目标分支变化，并进行时间线变基
+<span class="token function">git</span> rebase <span class="token punctuation">(</span>--continue <span class="token operator">|</span> --abort <span class="token operator">|</span> --quit<span class="token punctuation">)</span> // （继续，撤销，静默）变基
+</code></pre></div></li> <li><p>临时储存</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> stash list // 查看储存列表
+<span class="token function">git</span> stash <span class="token punctuation">[</span>save message<span class="token punctuation">]</span> // 保存，save为可选项，message为本次储存的注释
+<span class="token function">git</span> stash pop stash@<span class="token punctuation">{</span>num<span class="token punctuation">}</span> // 恢复，num是可选项，恢复完会删除储存
+<span class="token function">git</span> stash apply stash@<span class="token punctuation">{</span>num<span class="token punctuation">}</span> // 恢复，num是可选项，恢复完不会删除储存
+<span class="token function">git</span> stash drop stash@<span class="token punctuation">{</span>num<span class="token punctuation">}</span> // 删除某个储存
+<span class="token function">git</span> stash <span class="token function">clear</span> // 删除所有储存
+</code></pre></div></li></ul></div> <!----> <footer class="page-edit"><!----> <!----></footer> <!----> </main> <div class="valine-wrapper" data-v-d23bd480><div id="valine" data-v-d23bd480></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-3c921f52 data-v-3c921f52><i class="iconfont reco-up" data-v-3c921f52></i></div></div></div></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.2ffb31ea.js" defer></script><script src="/blog/assets/js/7.7024e7ac.js" defer></script><script src="/blog/assets/js/2.591bd700.js" defer></script><script src="/blog/assets/js/19.c4a51bfb.js" defer></script><script src="/blog/assets/js/10.50f1bcb9.js" defer></script>
+  </body>
+</html>
